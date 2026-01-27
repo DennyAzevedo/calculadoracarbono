@@ -1,0 +1,115 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.code-workspace
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio 
+.vs/
+.vscode/*
+*.coverage
+*.coveragexml
+.localhistory/
+
+# Visual Studio cache files
+*.[Cc]ache
+!?*.[Cc]ache/
+
+# JetBrains
+.idea/
+**/*.iml
+**/.idea
+**/.gradle
+
+# Java
+out/
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Merge Files
+*.bak
+
+#Gradle temporary files
+target/
+
+#Eclipse files
+**/.project
+**/.classpath
+**/.settings/
+/bin/
+blog/bin/
+**/.tern-project
+**/.factorypath
+
+# Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
+.venv/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Web workbench (sass)
+.sass-cache/
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
+*.pubxml
+*.publishproj
+
+# NuGet
+*.nupkg
+*.snupkg
+
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+!**/[Pp]ackages/repositories.config
+*.nuget.props
+*.nuget.targets
+
+# Node.js
+.ntvs_analysis.dat
+node_modules/
+
+# SSH Keys
+*.pem
+*.ppk
+
+#Other Files
+*.ini
