@@ -158,3 +158,64 @@ findDistance: function(origin, destination) {
 
 The entire file should define one global variable: RouteDB  
 Add comments explaining the structure
+
+### Quarto Prompt
+
+Create js/config.js that defines a global CONFIG object with:
+
+EMISSION_FACTORS object (kg CO2 per km):
+
+- bicycle: 0
+- car: 0.12
+- bus: 0.089
+- truck: 0.96
+
+TRANSPORT_MODES object with metadata:
+
+- For each mode (bicycle, car, bus, truck):
+
+- label: Portuguese name (Bicicleta, Carro, Ônibus, Caminhão)
+- icon: emoji (🚲, 🚗, 🚌, 🚚)
+- color: hex color code for UI
+
+CARBON_CREDIT object:
+
+- KG_PER_CREDIT: 1000
+- PRICE_MIN_BRL: 50
+- PRICE_MAX_BRL: 150
+
+Add a method to CONFIG called:
+
+```javascript
+populateDatalist: function() {
+// Get cities list from RoutesDB.getAllCities()
+// Get datalist element by id 'cities-list'
+// Create option elements for each city
+// Append to datalist
+}
+```
+
+Also add:
+
+```javascript
+setupDistanceAutofill: function() {
+// Get origin and destination input elements
+// get distance input and manual checkbox
+// Add 'change' event listeners to both origin and destination inputs
+// On change:
+//   - Get trimmed values from both inputs
+//   - If both are filled, call RoutesDB.findDistance()
+//   - If distance found:
+//     - Fill distance input with value
+//     - Make it readonly
+//     - Show success message (change helper text color to green)
+//   - If not found:
+//     - Clear distance input
+//     - Change helper text to suggest manual input
+// Add 'change' listener to manual checkbox:
+// - When checked: remove readonly from distance, allow manual entry
+// - When unchecked: try to find route again
+}
+```
+
+Everything should be in one global CONFIG object
