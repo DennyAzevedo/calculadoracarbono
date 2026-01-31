@@ -219,3 +219,49 @@ setupDistanceAutofill: function() {
 ```
 
 Everything should be in one global CONFIG object
+
+### Quinto Prompt
+
+Create js/calculator.js with a global Calculator object containing these methods:
+
+```javascript
+calculateEmission: function(distanceKm, TranspotMode) {
+// Get emission factor from CONFIG_EMISSION_FACTORS using transportMode as key
+// Calculate: distance * factor
+// Return result rounded to 2 decimal places
+}
+
+calculateAllModes: function(distanceKm) {
+// Create array to store results
+// For each transport mode in CONFIG_EMISSION_FACTORS:
+//   - Calculate emission for that mode
+//   - Calculate car emission as baseline
+//   - Calculate percentage vs var: (emissao/carEmission) * 100
+//   - Push object to array: {mode:'car', emission: 12.5, precentageVsCar: 100}
+// Sort array by emission (lowest first)
+// Return array
+}
+
+calculateSavings: function(emission, baselineEmission) {
+// Calculate saved kg: baseline - emission
+// Calculate percentage: (saved/baseline) * 100
+// Return object: {saveKg: 5.5, percentage: 45}
+// Round numbers to 2 decimals
+}
+
+calculateCarbonCredits: function(emissionKg) {
+// Divide emission by CONFIG_CARBON_CAREDIT.KG_PER_CREDIT
+// Return rounded to 4 decimal places
+}
+
+estimateCreditPrice: function(credits) {
+// Calculate min: credits * PRICE_MIN_BRL
+// Calculate max: credits * PRICE_MAX_BRL
+// Calculate average: (min + max) / 2
+// Return object: { min: 50.5, max: 150.5, average: 100.5 }
+// Round to 2 decimals
+}
+```
+
+Add comments explainning each calculation  
+The file defines one global variable: Calculator
