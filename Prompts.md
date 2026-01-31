@@ -100,7 +100,7 @@ TRANSPORT MODE GRID:
   - Border, padding, rounded corners, cursor pointer, text-align center
   - Display flex column for icon (3rem emoji) and label text
   - Hover: lift with transform translateY(-2px) ND SHADOW
-  - When input checked: primary border (2px). light primary background
+  - When input checked: primary border (2px), light primary background
   - Use adjacent sibling selector: input:checked + .card-class
 
 CHECKBOX:
@@ -121,4 +121,40 @@ Add .spinner class for loading animation:
 RESPONSIVE:
 
 - Use min-width: 768px media query for desktop adjustments
-- Trsnaport grid: 4 colummns on desktop, 2 on mobile (max-width: 767px)
+- Transport grid: 4 colummns on desktop, 2 on mobile (max-width: 767px)
+
+### Terceiro Prompt
+
+Create js/routes-data.js with a global object named RoutesDB containing:
+
+A property 'routes' as an array of route objects with structure:
+
+- origin: string (city name with state, e.g., "São Paulo, SP")
+- destination: string (city name with state)
+- distanceKm: number (actual distance between cities)
+
+Include 30-40 popular Brazilian routes:
+
+- Capital to capital connections (São Paulo - Rio de Janeiro: 430km, São Paulo - Brasília: 1015Km, Rio de Janeiro - Brasília: 1148Km, etc.)
+- Major regional routes (São Paulo - Campinas: 95Km, Rio de Janeiro - Niterói: 13Km, Belo Horizonte - Ouro Preto: 100Km, etc.)
+- Cover different regions of Brazil
+
+Add these methods to RoutesDB object:
+
+```javascript
+getAllCities: function() {
+// Return unique sorted array of all city names from routes
+// Extract from both origin and destination
+// Remove duplicates and sort alphabetically
+}
+
+findDistance: function(origin, destination) {
+// Find route distance between two cities
+// Search in both directions (origin-destination and destination-origin)
+// Normalize input: trim whitespace and convert to lowercase for comparison
+// Return distance in Km if found, null if not found
+}
+```
+
+The entire file should define one global variable: RouteDB  
+Add comments explaining the structure
